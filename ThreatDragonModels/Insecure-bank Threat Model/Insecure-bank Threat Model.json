@@ -136,6 +136,19 @@
                   "new": false,
                   "number": 2,
                   "score": "7"
+                },
+                {
+                  "id": "69abb5ba-18f4-4ac5-985d-c79ed7f1eb5e",
+                  "title": "Слабый алгоритм подтверждения перевода",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Для подтверждения переводы используется 3-х значный код, который можно перебрать.\nD:7/R:9/E:10/A:8/D:8",
+                  "mitigation": "Разработать новый алгоритм подтверждения запроса перевода - 2fa с SMS или push-уведомлениями. Использовать капчу.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "8,8"
                 }
               ]
             }
@@ -154,8 +167,8 @@
                 "text": "Загрузка аватара"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -168,12 +181,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "8a6f3314-3796-4219-88ce-7938025aac2a",
+                  "title": "Отсутствует проверка загружаемых файлов",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В системе отсутствует проверка типа и размера загружаемых аватаров, что может привести к XSS атакам.\nD:9/R:9/E:10/A:8/D:8",
+                  "mitigation": "Сделать валидацию загружаемых данных",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "8,8"
+                }
+              ]
             },
             "zIndex": 3
           },
@@ -191,8 +218,8 @@
                 "text": "Загрузка сертификата"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -205,12 +232,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "8fb4f5bb-236f-4b1d-be3f-2cdb111f8307",
+                  "title": "Отсутствует проверка загружаемых файлов",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В системе отсутствует проверка типа и размера загружаемых файлов, что может привести к XSS атакам.\nD:9/R:9/E:10/A:8/D:8",
+                  "mitigation": "Сделать валидацию загружаемых данных",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "8,8"
+                }
+              ]
             },
             "zIndex": 4
           },
@@ -345,6 +386,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Cyber-ed",
-    "threatTop": 2
+    "threatTop": 5
   }
 }
